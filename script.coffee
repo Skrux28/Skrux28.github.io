@@ -60,6 +60,7 @@ pre { left: 50%; width: 45%}
  * 第一次了解到代码还能这么玩
  * 我感觉也确实挺有意思的
  * 这才敢发出来给你
+ * (可能只是个烂货）
  * 能搞到网页里也方便你看免得还要配置一堆环境
  * 这个爱心虽然还是很丑但是html+css可能只能做到这一步了
  */
@@ -170,7 +171,7 @@ pre { left: 50%; width: 45%}
   }
 }
 
-/* 下面这一坨就可以让这个心心动起来了
+/* 下面这一坨就可以让这个心动起来了
  */
 
 #heart, #echo {
@@ -198,13 +199,18 @@ pre { left: 50%; width: 45%}
 }
 
 /* 我现在能力时间有限没能给你做出更完美更好看的
- * 等以后我变成程序猿了变牛逼了要做出更牛逼的东西来
+ * 等以后我变成程序猿了要做出更牛逼的东西来
  */
 
 #heart, #echo {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
+
+
+
+
+
 
 /*
  * 希望你能原谅我这次生日的准备不周
@@ -218,6 +224,10 @@ pre { left: 50%; width: 45%}
  * 生日快乐汪汪🎂
  * 我爱你
  */
+
+
+
+
 
 
 """
@@ -252,7 +262,7 @@ writeStyles = (message, index, interval) ->
     pre.scrollTop = pre.scrollHeight
     writeStyleChar message[index++]
     setTimeout (->
-      writeStyles message, index, if openComment then 60 else 5
+      writeStyles message, index, if openComment then 80 else 8
     ), interval
     
 
@@ -266,7 +276,7 @@ $('body').append """
 
 # faster typing in small iframe on codepen homepage
 # time = if window.innerWidth <= 578 then 4 else 16
-time = 60
+time = 80
 
 # starting it off
 writeStyles(styles, 0, time)
